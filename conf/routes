@@ -3,8 +3,10 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /wsJson                           controllers.HomeController.wsJson
-GET     /json                             controllers.HomeController.json
+GET        /json                controllers.HomeController.json
+GET        /json/:id            controllers.HomeController.jsonWithCharset(id: String)
+GET        /jsonWs              controllers.HomeController.jsonWs
+
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
